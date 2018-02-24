@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <?php
+                if ($_SERVER['HTTPS'] != "on") {
+                    $url = "https://". $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+                    header("Location: $url");
+                    exit;
+                    }
+            ?>
+        </head>
+        <body>
+            <form>
+                Public Address:<br>
+                <label>
+                    <input type="text" name="address">
+                </label>
+                Content:<br>
+                <label>
+                    <input type="text" name="content">
+                </label>
+            </form>
+        </body>
+    </html>
