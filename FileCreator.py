@@ -3,7 +3,7 @@
 import urllib3
 import click
 
-
+# TODO Switch to Flask UI
 @click.command()
 @click.option('--name', prompt='Your name',
               help='The name of the patient')
